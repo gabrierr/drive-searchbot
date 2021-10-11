@@ -125,9 +125,9 @@ class GoogleDriveHelper:
                     content += f'<b> | <a href="https://telegra.ph/{self.path[nxt_page]}">Next</a></b>'
                     nxt_page += 1
             Telegraph(access_token=telegraph_token).edit_page(path = self.path[prev_page],
-                                 title = 'Drive Search',
-                                 author_name='drive-searchbot',
-                                 author_url='https://github.com/breakdowns/drive-searchbot',
+                                 title = 'Detective Minami',
+                                 author_name='Rosydr',
+                                 author_url='https://github.com/gabrierr/drive-searchbot',
                                  html_content=content)
         return
 
@@ -139,9 +139,9 @@ class GoogleDriveHelper:
             response = self.drive_query(parent_id, fileName)
             if response:
                 if add_title_msg:
-                    msg = f'<h3>Search Results for: {fileName}</h3><br>drive-searchbot<br><br>'
+                    msg = f'<h3>Hasil Pencarian Dari: {fileName}</h3><br>Pencarian Minami<br>'
                     add_title_msg = False
-                msg += f"╾────────────╼<br><b>{DRIVE_NAME[INDEX]}</b><br>╾────────────╼<br>"
+                msg += f"<b>⎡{DRIVE_NAME[INDEX]}⎦</b>"
                 for file in response:
                     if file.get('mimeType') == "application/vnd.google-apps.folder":  # Detect Whether Current Entity is a Folder or File.
                         msg += f"📁 <code>{file.get('name')}</code> <b>(folder)</b><br>" \
@@ -176,9 +176,9 @@ class GoogleDriveHelper:
 
         for content in self.telegraph_content :
             self.path.append(Telegraph(access_token=telegraph_token).create_page(
-                                                    title = 'Drive Search',
-                                                    author_name='drive-searchbot',
-                                                    author_url='https://github.com/breakdowns/drive-searchbot',
+                                                    title = 'Detective Minami',
+                                                    author_name='Rosydr',
+                                                    author_url='https://github.com/gabrierr/drive-searchbot',
                                                     html_content=content
                                                     )['path'])
 
@@ -186,7 +186,7 @@ class GoogleDriveHelper:
         if self.num_of_path > 1:
             self.edit_telegraph()
 
-        msg = f"<b>Search Results For</b> <code>{fileName}</code>"
+        msg = f"<b>Hasil Pencarian Dari</b> <code>{fileName}</code>"
         buttons = button_builder.ButtonMaker()
         buttons.buildbutton("VIEW", f"https://telegra.ph/{self.path[0]}")
 
