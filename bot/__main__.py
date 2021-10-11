@@ -7,7 +7,7 @@ from .modules import authorize, list
 
 
 def start(update, context):
-    start_string = '\x1fHallo Saya Detective Minami, Tugas saya  adalah mencari File/Folder di Drive Pribadi\x1f'
+    start_string = '\x1fPanggil aku Detective Minami, Tugasku adalah mencari File/Folder di Drive Pribadi\x1f'
     sendMessage(start_string, context.bot, update)
 
 
