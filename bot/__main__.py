@@ -7,7 +7,7 @@ from .modules import authorize, list
 
 
 def start(update, context):
-    start_string = '\x1fThis bot can search file from your Google Drive!\x1f'
+    start_string = '\x1fHallo Saya Detective Minami, Tugas saya  adalah mencari File/Folder di Drive Pribadi\x1f'
     sendMessage(start_string, context.bot, update)
 
 
@@ -15,7 +15,7 @@ def log(update, context):
     sendLogFile(context.bot, update)
 
 
-botcmds = [(f'{BotCommands.ListCommand}','Searches files in Drive')]
+botcmds = [(f'{BotCommands.ListCommand}','Mencari File di Drive')]
 
 
 def main():
@@ -28,7 +28,7 @@ def main():
     dispatcher.add_handler(log_handler)
 
     updater.start_polling()
-    LOGGER.info("Bot Started!")
+    LOGGER.info("Bot Berjalan!")
     updater.idle()
 
 main()
