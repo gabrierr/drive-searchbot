@@ -20,7 +20,7 @@ def list_drive(update, context):
             editMessage(f'Tidak ada hasil untuk <code>{search}</code>', reply, button)
 
     except IndexError:
-        sendMessage('Ketikkan kunci pencarian bersama dengan perintah!!', context.bot, update)
+        sendMessage('Ketikkan kunci pencarian bersama dengan perintah!', context.bot, update)
 
 
 list_handler = CommandHandler(BotCommands.ListCommand, list_drive,filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
