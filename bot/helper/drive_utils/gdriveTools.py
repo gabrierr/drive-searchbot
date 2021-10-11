@@ -141,7 +141,7 @@ class GoogleDriveHelper:
                 if add_title_msg:
                     msg = f'<h3>Hasil Pencarian Dari: {fileName}</h3><br>Pencarian Minami<br>'
                     add_title_msg = False
-                msg += f"<b>⎡{DRIVE_NAME[INDEX]}⎦</b>"
+                msg += f"<b>⎡{DRIVE_NAME[INDEX]}⎦</b><br>"
                 for file in response:
                     if file.get('mimeType') == "application/vnd.google-apps.folder":  # Detect Whether Current Entity is a Folder or File.
                         msg += f"📁 <code>{file.get('name')}</code> <b>(folder)</b><br>" \
