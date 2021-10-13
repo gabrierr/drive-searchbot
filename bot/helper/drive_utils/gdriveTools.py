@@ -160,7 +160,9 @@ class GoogleDriveHelper:
                         if INDEX_URL[INDEX] is not None:
                             url_path = "/".join([requests.utils.quote(n, safe ='') for n in self.get_recursive_list(file, parent_id)])
                             url = f'{INDEX_URL[INDEX]}/{url_path}'
+                            urls = f'{INDEX_URL[INDEX]}/{url_path}?a=view'
                             msg += f'<b> | <a href="{url}">Index Link</a></b>'
+                            msg += f'<b> | <a href="{urls}">View Link</a></b>'
                     msg += '<br><br>'
                     content_count += 1
                     if content_count == TELEGRAPHLIMIT :
