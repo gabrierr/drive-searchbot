@@ -134,6 +134,7 @@ class GoogleDriveHelper:
     def drive_list(self, fileName):
         msg = ''
         content_count = 0
+        all_contents_count = 0
         add_title_msg = True
         for INDEX, parent_id in enumerate(DRIVE_ID):
             response = self.drive_query(parent_id, fileName)
