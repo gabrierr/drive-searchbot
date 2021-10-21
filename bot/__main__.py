@@ -20,8 +20,9 @@ def index(update, context):
     buttons = button_builder.ButtonMaker()
     buttons.buildbutton("Index Frost", f"https://view.gabriersite.workers.dev/0:/")
     buttons.buildbutton("Index Zukky", f"https://media.gabriersite.workers.dev/0:/")
+    buttons.buildbutton("Team Drive", f"https://groups.google.com/u/1/g/jiwa-laknat")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
-    drive_string = f'''Akses ke Gabrier Index ⬇️'''
+    drive_string = f'''Akses ke Gabrier Index or join Team Drive ⇩'''
     sendMarkup(drive_string, context.bot, update, reply_markup)
 
 botcmds = [(f'{BotCommands.ListCommand}','Mencari File di Drive')]
