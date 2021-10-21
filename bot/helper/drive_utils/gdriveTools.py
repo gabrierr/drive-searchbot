@@ -165,6 +165,7 @@ class GoogleDriveHelper:
                             msg += f'<b> | <a href="{urls}">View Link</a></b>'
                     msg += '<br><br>'
                     content_count += 1
+                    all_contents_count += 1
                     if content_count == TELEGRAPHLIMIT :
                        self.telegraph_content.append(msg)
                        msg = ""
@@ -188,7 +189,7 @@ class GoogleDriveHelper:
         if self.num_of_path > 1:
             self.edit_telegraph()
 
-        msg = f"<b>Hasil Pencarian Dari</b> <code>{fileName}</code>"
+        msg = f"📁 Menemukan sekitar <code>{all_contents_count}</code> hasil\n🔎<b> Pencarian Dari</b> <code>{fileName}</code>"
         buttons = button_builder.ButtonMaker()
         buttons.buildbutton("Lihat", f"https://telegra.ph/{self.path[0]}")
 
