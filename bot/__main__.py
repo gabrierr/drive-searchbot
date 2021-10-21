@@ -20,6 +20,7 @@ def index(update, context):
     sendMessage('Akses Gabrier Index Drive', context.bot, update)
     buttons = button_builder.ButtonMaker()
     buttons.buildbutton("Index Drive", f"https://view.gabriersite.workers.dev/0:/")
+    reply_markup = InlineKeyboardMarkup(buttons.build_menu(1))
 
 botcmds = [(f'{BotCommands.ListCommand}','Mencari File di Drive')]
 
