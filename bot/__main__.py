@@ -21,7 +21,7 @@ def index(update, context):
     buttons.buildbutton("Index Drive", f"https://view.gabriersite.workers.dev/0:/")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(1))
     drive_string = f'''Silahkan akses Index Drive berikut. Enjoy!'''
-    sendMessage(drive_string, context.bot, update, reply_markup)
+    sendMarkup(drive_string, context.bot, update, reply_markup)
 
 botcmds = [(f'{BotCommands.ListCommand}','Mencari File di Drive')]
 
