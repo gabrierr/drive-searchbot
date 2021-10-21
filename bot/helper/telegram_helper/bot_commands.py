@@ -6,5 +6,6 @@ class _BotCommands:
         self.AuthorizeCommand = 'auth4'
         self.UnAuthorizeCommand = 'unauth4'
         self.LogCommand = 'log4'
+        self.IndexCommand = 'drive'
 
 BotCommands = _BotCommands()
