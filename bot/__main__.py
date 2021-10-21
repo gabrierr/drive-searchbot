@@ -17,10 +17,11 @@ def log(update, context):
     sendLogFile(context.bot, update)
 
 def index(update, context):
-    sendMessage('Akses Gabrier Index Drive', context.bot, update)
     buttons = button_builder.ButtonMaker()
     buttons.buildbutton("Index Drive", f"https://view.gabriersite.workers.dev/0:/")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(1))
+    drive_string = f'''Silahkan akses Index Drive berikut. Enjoy!'''
+    sendMessage(drive_string, context.bot, update, reply_markup)
 
 botcmds = [(f'{BotCommands.ListCommand}','Mencari File di Drive')]
 
