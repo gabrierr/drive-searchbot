@@ -35,7 +35,7 @@ def odrive(update, context):
     buttons.buildbutton("Drive XDMedia (FLAC)", f"https://www.odrive.com/s/e1829671-3a48-4c93-9c18-b69d91940454-61a79a78")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(3))
     drive_string = f'''Akses ke Odrive ⇩'''
-    sendMarkup(drive_string, context.bot, update, reply_markup)
+    sendMarkup(odrive_string, context.bot, update, reply_markup)
     
 botcmds = [(f'{BotCommands.ListCommand}','Mencari File di Drive')]
 
