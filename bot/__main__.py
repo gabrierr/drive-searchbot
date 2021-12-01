@@ -32,10 +32,6 @@ def odrive(update, context):
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(3))
     odrive_string = f'''Akses ke Odrive ⇩'''
     sendMarkup(odrive_string, context.bot, update, reply_markup)
-
-def pass(update, context):
-    pass = f'Drive Seikel ⇩\nUsername : user\nPassword : user\n\nOdrive ⇩\nZukky : medrive\nXDMedia (FLAC) : xdmedia\n\nby : rosydr_'
-    sendMessage(pass, context.bot, update)
     
 botcmds = [(f'{BotCommands.ListCommand}','Mencari File di Drive')]
 
@@ -44,13 +40,11 @@ def main():
     bot.set_my_commands(botcmds)
 
     start_handler = CommandHandler(BotCommands.StartCommand, start, filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
-    pass_handler = CommandHandler(BotCommands.PassCommand, pass, filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
     log_handler = CommandHandler(BotCommands.LogCommand, log, filters=CustomFilters.owner_filter, run_async=True)
     index_handler = CommandHandler(BotCommands.IndexCommand, index, filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
     odrive_handler = CommandHandler(BotCommands.OdriveCommand, odrive, filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
 
     dispatcher.add_handler(start_handler)
-    dispatcher.add_handler(pass_handler)
     dispatcher.add_handler(log_handler)
     dispatcher.add_handler(index_handler)
     dispatcher.add_handler(odrive_handler)
