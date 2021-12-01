@@ -8,6 +8,5 @@ class _BotCommands:
         self.LogCommand = 'log4'
         self.IndexCommand = 'drive'
         self.OdriveCommand = 'od'
-        self.PassCommand = 'pass'
 
 BotCommands = _BotCommands()
