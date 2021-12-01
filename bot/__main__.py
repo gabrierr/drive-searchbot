@@ -11,10 +11,6 @@ from bot.helper.telegram_helper import button_builder
 def start(update, context):
     start_string = '\x1fPanggil aku Detective Minami, Tugasku adalah mencari File/Folder di Drive Pribadi\x1f'
     sendMessage(start_string, context.bot, update)
-    
-def pass(update, context):
-    pass_string = '\x1fDrive Seikel ⇩ \nUsername : user\nPassword : user\n\nOdrive ⇩\nZukky : medrive\nXDMedia (FLAC) : xdmedia\n\nby : rosydr_\x1f'
-    sendMessage(pass_string, context.bot, update)
 
 def log(update, context):
     sendLogFile(context.bot, update)
@@ -36,6 +32,10 @@ def odrive(update, context):
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(3))
     odrive_string = f'''Akses ke Odrive ⇩'''
     sendMarkup(odrive_string, context.bot, update, reply_markup)
+
+def pass(update, context):
+    pass_string = '\x1fDrive Seikel ⇩\nUsername : user\nPassword : user\n\nOdrive ⇩\nZukky : medrive\nXDMedia (FLAC) : xdmedia\n\nby : rosydr_\x1f'
+    sendMessage(pass_string, context.bot, update)
     
 botcmds = [(f'{BotCommands.ListCommand}','Mencari File di Drive')]
 
