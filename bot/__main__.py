@@ -34,8 +34,8 @@ def odrive(update, context):
     sendMarkup(odrive_string, context.bot, update, reply_markup)
 
 def pass(update, context):
-    pass_string = '\x1fDrive Seikel ⇩\nUsername : user\nPassword : user\n\nOdrive ⇩\nZukky : medrive\nXDMedia (FLAC) : xdmedia\n\nby : rosydr_\x1f'
-    sendMessage(pass_string, context.bot, update)
+    pass = f'Drive Seikel ⇩\nUsername : user\nPassword : user\n\nOdrive ⇩\nZukky : medrive\nXDMedia (FLAC) : xdmedia\n\nby : rosydr_'
+    sendMessage(pass, context.bot, update)
     
 botcmds = [(f'{BotCommands.ListCommand}','Mencari File di Drive')]
 
