@@ -13,7 +13,7 @@ def start(update, context):
     sendMessage(start_string, context.bot, update)
     
 def pass(update, context):
-    start_string = '\x1fDrive Seikel ⇩ \nUsername : user\nPassword : user\n\nOdrive ⇩\nZukky : medrive\nXDMedia (FLAC) : xdmedia\n\nby : rosydr_\x1f'
+    pass_string = '\x1fDrive Seikel ⇩ \nUsername : user\nPassword : user\n\nOdrive ⇩\nZukky : medrive\nXDMedia (FLAC) : xdmedia\n\nby : rosydr_\x1f'
     sendMessage(pass_string, context.bot, update)
 
 def log(update, context):
