@@ -21,8 +21,8 @@ def index(update, context):
     buttons.buildbutton("Index Zukky", f"https://media.gabriersite.workers.dev/0:/")
     buttons.buildbutton("Odrive", f"https://www.odrive.com/s/30ff3fb5-45d4-4563-b48c-fc174f9324bf-61a7a7cb")
     buttons.buildbutton("Team Drive", f"https://groups.google.com/u/1/g/jiwa-laknat")
-    reply_markup = InlineKeyboardMarkup(buttons.build_menu(3))
-    drive_string = f'''⇩ Akses ke Gabrier Index or join Team Drive ⇩'''
+    reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
+    drive_string = f'''Akses ke Gabrier Index or join Team Drive ⇓'''
     sendMarkup(drive_string, context.bot, update, reply_markup)
     
 botcmds = [(f'{BotCommands.ListCommand}','Mencari File di Drive')]
